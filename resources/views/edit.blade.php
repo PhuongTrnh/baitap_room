@@ -12,14 +12,14 @@
             @method('PUT')
             <div class="form-group">
                 <label for="number">Number</label>
-                <input type="number" class="form-control" id="number" name="number" value="{{ old('number') }}" required>
+                    <input type="number" min="0" name="number" class="form-control" value="1" value="{{ $room->number }}"/>
             </div>
 
             <div class="form-group">
                 <label for="type">Type</label>
                 <select class="form-control" id="type" name="type" required>
-                    <option value="single">Single</option>
-                    <option value="double">Double</option>
+                    <option value="standard">Standard</option>
+                    <option value="deluxe">Deluxe</option>
                     <option value="suite">Suite</option>
                 </select>
             </div>
@@ -27,8 +27,9 @@
             <div class="form-group">
                 <label for="availability">availability</label>
                 <select class="form-control" id="availability" name="availability" required>
-                    <option value="1">Available</option>
-                    <option value="0">Not Available</option>
+                    <option value="available">Available</option>
+                    <option value="occupied">Occupied</option>
+                    <option value="under maintenance">Under maintenance</option>    
                 </select>
             </div>              
             <div class="text-center">

@@ -4,8 +4,6 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-use function PHPSTORM_META\type;
-
 return new class extends Migration
 {
     /**
@@ -17,9 +15,9 @@ return new class extends Migration
             $table->id();
             $table->integer('number');
             $table->string('type');
-            $table->boolean('availability');
+            $table->string('availability');
             $table->softDeletes();
-           $table->timestamps();
+            $table->timestamps();
         });
     }
 

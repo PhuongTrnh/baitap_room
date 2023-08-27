@@ -34,7 +34,7 @@ class roomController extends Controller
         $request->validate([
             'number'          =>  'required',
             'type'         =>  'required|string',
-            'availability'         =>  'required|boolean',
+            'availability'         =>  'required|string',
         ]);
 
 
@@ -73,7 +73,7 @@ class roomController extends Controller
         $request->validate([
             'number'          =>  'required',
             'type'         =>  'required|string',
-            'availability'         =>  'required|boolean',
+            'availability'         =>  'required|string',
         ]);
 
         $room = room::find($request->hidden_id);
