@@ -29,7 +29,7 @@
         <div class="row mb-3">
             <label class="col-sm-2 col-label-form"><b>Availability</b></label>
             <div class="col-sm-10">
-                {{ $room->availability ? "1" : "0" }}
+                <p class="form-control-static">{{ $room->availability }}</p>
             </div>
         </div>
         </div>  
